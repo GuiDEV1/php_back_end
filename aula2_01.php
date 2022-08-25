@@ -10,15 +10,8 @@
     <h1>PHP</h1>
 
     <?php
-    echo "Primeira Linha<br>";
+    echo "<h2>Primeira Linha</h2><br>";
     echo "Segunda Linha<br>";
-    
-
-    
-    
-    
-    
-    
     
     
     ?>

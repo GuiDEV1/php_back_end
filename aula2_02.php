@@ -7,9 +7,10 @@
     <title>código 02</title>
 </head>
 <body>
+    <h1>PHP</h1>
     <?php
     echo ("Prefiro o calor do que o frio<br>");
-    echo ("Prefiro o calor do que o frio<br>");
+    echo "Prefiro o calor do que o frio<br>";
     
 
      ?>

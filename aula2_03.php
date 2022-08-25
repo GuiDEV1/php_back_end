@@ -9,8 +9,8 @@
 <body>
     <h1>PHP</h1>
     <?php
-    print ("Prefiro o calor do que o frio<br>");
-    print ("Prefiro calor do que frio<br>");
+    print ("Prefiro o calor do --- que o frio<br>");
+    print  "Prefiro calor do --- que frio<br>";
 
      ?>
 </body>
