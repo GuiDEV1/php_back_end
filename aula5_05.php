@@ -14,8 +14,9 @@
     $valor = 123456;
     $nota = 7.5;
    
-    print ($valor);
-
+    echo $_nome;
+    echo "<br>";
+    echo $valor;
      ?>
 </body>
 </html>
