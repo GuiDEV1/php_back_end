@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google maps api</title>
+  <style>
+     #map {
+      width: 50%;
+      height: 400px;
+      margin: 60px auto;
+      border: 1px solid red;     
+    }
+  </style>
+
+<script
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKBnQJjCVtbU0UxiPwW3sT_5kAQBPgdgU&callback=initMap&v=weekly"
+   defer
+></script>  
+</head>
+<body>
+
+<label>
+  Latitude: <span id="lat"></span>
+    
+</label> 
+  <br/>
+
+  <label>
+
+   Longitude: <span id="lon"></span>
+  </label>
+  
+  <div id="map"></div>
+
+  <script>
+  // -23.68959943774232, -46.77981941596609
+  var lat = -23.68959943774232;
+  var lon = -46.77981941596609;
+
+   function getLocation() {
+     if(!navigator.geolocation) {
+       return null;
+      navigator.geolocation.getCurrentPosition((pos) => {
+      lat = document.getElementById("lat").innerText = pos.coords.latitude;
+      lon = document.getElementById("lon").innerText = pos.coords.longitude;
+      initMap();
+      }); 
+     }
+   }
+  
+   
+  let map;
+    function initMap() {
+      const uluru = { lat: lat, lng: lon };
+
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: uluru,
+        zoom: 16,
+      });
+      const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+  });
+
+    }
+    getLocation();
+
+
+    /*
+      const uluru = { lat: -25.344, lng: 131.031 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+    */
+   
+
+  </script>
+  
+</body>
+</html>
